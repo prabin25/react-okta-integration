@@ -1,0 +1,22 @@
+# Fetching the latest node image on apline linux
+FROM node:alpine AS development
+
+# Declaring env
+#ENV NODE_ENV development
+ENV ISSUER https://myaccessdev.freseniusmedicalcare.com/oauth2/default
+ENV CLIENT_ID 0oa5o5iinzeWJ9njI1d7
+ENV PORT 80
+ENV PUBLIC_PATH /workbenchui/
+
+# Setting up the work directory
+WORKDIR /react-app
+
+# Installing dependencies
+COPY ./package.json /react-app
+RUN npm install
+
+# Copying all the files in our project
+COPY . .
+EXPOSE 80:80
+# Starting our application
+CMD npm start

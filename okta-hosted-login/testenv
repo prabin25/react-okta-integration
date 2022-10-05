@@ -1,0 +1,9 @@
+ISSUER=https://myaccessdev.freseniusmedicalcare.com/oauth2/default
+
+#CLIENT_ID=0oa5o5iinzeWJ9njI1d7
+#PORT=3000
+CLIENT_ID=0oa4ittzp95vt9ssf1d7
+PORT=80
+#PORT=4200
+
+PUBLIC_PATH=/workbenchui/

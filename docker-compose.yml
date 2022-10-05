@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+    react-app-dev:
+        build:
+            context: ./okta-hosted-login
+            dockerfile: Dockerfile.dev
+        container_name: react-app-dev-c
+        ports:
+          - '80:80'
+    react-app-local:
+        build:
+            context: ./okta-hosted-login
+            dockerfile: Dockerfile.local
+        container_name: react-app-local-c
+        ports:
+          - '4200:4200'	
